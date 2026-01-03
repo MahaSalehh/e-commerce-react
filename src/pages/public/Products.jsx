@@ -176,7 +176,7 @@ const Products = () => {
         <>
           <Row className="g-4">
             {products.map((product) => (
-              <Col key={product.id} lg={3} md={4} sm={6}>
+              <Col key={product.id} lg={3} md={4} sm={6} xs={6}>
                 <Card className="h-100 shadow-sm position-relative">
                   <Card.Img src={product.thumbnail} height={200} />
 

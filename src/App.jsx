@@ -25,9 +25,10 @@ function App() {
       <Router>
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/product/:id" element={<ProductDetailsPage />} />
           <Route path="/Login" element={<Login />} />
           <Route path="/Register" element={<Register />} />
-          <Route element={<Layout />}>
+          <Route element={<ProtectedRoute><Layout /></ProtectedRoute>}>
             <Route
               path="/Dashboard"
               element={
@@ -44,7 +45,6 @@ function App() {
                 </ProtectedRoute>
               }
             />
-            <Route path="/product/:id" element={<ProductDetailsPage />} />
             <Route
               path="/Carts"
               element={

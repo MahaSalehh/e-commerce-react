@@ -54,6 +54,7 @@ body {
   overflow-x: hidden;
 }
 
+.app-layout { min-height: 100vh; display: flex; flex-direction: column; }
 
 .link-decoration {
   text-decoration: none;
@@ -303,3 +304,4 @@ img {
     margin-top: 12px;
   }
 }
+

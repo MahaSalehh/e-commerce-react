@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
-import { Container, Row, Col, Button, Spinner, Alert } from "react-bootstrap";
-import { useParams, useNavigate } from "react-router-dom";
+import { Container, Row, Col, Button, Spinner, Alert, Navbar } from "react-bootstrap";
+import { useParams, useNavigate , Link} from "react-router-dom";
+import { FaShoppingBag } from "react-icons/fa";
 import { productsAPI } from "../service/api";
 
 const ProductDetailsPage = () => {
@@ -32,7 +33,25 @@ const ProductDetailsPage = () => {
   };
 
   return (
-    <Container className="px-1">
+    <div className="app-layout">
+      <Navbar expand="lg" sticky="top">
+        <Container>
+          <Navbar.Brand>
+            <FaShoppingBag className="me-2" />
+            E-Commerce Store
+          </Navbar.Brand>
+          <Navbar.Toggle />
+          <Navbar.Collapse className="justify-content-end gap-2">
+            <Button as={Link} to="/Login" variant="light" size="sm">
+              Login
+            </Button>
+            <Button as={Link} to="/Register" variant="primary" size="sm">
+              Register
+            </Button>
+          </Navbar.Collapse>
+        </Container>
+      </Navbar>
+    <Container className="px-1 my-4">
       <Button variant="primary" onClick={() => navigate(-1)}>
         ← Back
       </Button>
@@ -75,6 +94,7 @@ const ProductDetailsPage = () => {
         <p className="text-center mt-4">Product not found.</p>
       )}
     </Container>
+    </div>
   );
 };
 
