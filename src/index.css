@@ -1,0 +1,305 @@
+:root {
+  --font-primary: "Poppins", "Inter", "SF Pro", sans-serif;
+  --font-size-base: 16px;
+  --line-height-base: 1.5;
+  --primary-color: #788fca;
+  --primary-dark: #7e96c4;
+  --primary-light: #bed0f4;
+  --secondary-color: #d7b7bc;
+  --background: #ffffff;
+  --card-bg: #ffffff;
+  --text-primary: #2f3a56;
+  --text-secondary: #4b5878;
+  --text-muted: #6b7896;
+  --border-color: rgba(139, 166, 233, 0.35);
+  --success-color: #22c55e;
+  --warning-color: #fbbf24;
+  --error-color: #ef4444;
+  --info-color: #8ba6e9;
+  --shadow-sm: 0 2px 6px rgba(0, 0, 0, 0.06);
+  --shadow-md: 0 6px 16px rgba(126, 150, 196, 0.25);
+  --shadow-lg: 0 10px 30px rgba(88, 127, 200, 0.35);
+  --radius: 12px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: var(--font-primary);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-base);
+  background-color: var(--background);
+  color: var(--text-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+
+.link-decoration {
+  text-decoration: none;
+  color: #383838;
+}
+
+.link-auth {
+  text-decoration: underline;
+  color: #383838;
+}
+
+
+.navbar {
+  background: linear-gradient(
+    120deg,
+    var(--primary-color),
+    var(--primary-dark)
+  );
+  box-shadow: 0 2px 12px var(--shadow-md);
+  padding: 12px 10px;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+.navbar-header-row {
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  overflow: visible;
+}
+.navbar-toggler:focus,
+.navbar-toggler:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.6);
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  line-height: 1;
+  margin: 0;
+  color: #fff !important;
+  font-weight: 500;
+}
+
+.navbar-toggler {
+  padding: 0.35rem 0.6rem;
+}
+
+
+.navbar .nav-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  white-space: nowrap;
+  color: #fff !important;
+}
+
+.navbar .nav-link:hover {
+  color: var(--primary-light) !important;
+  transform: translateY(-1px);
+}
+
+.navbar .nav-link svg {
+  font-size: 1rem;
+  flex-shrink: 0;
+  max-width: 100%;
+}
+
+
+.hero-section {
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(2rem, 6vw, 4rem) 1rem;
+  background: linear-gradient(rgb(123, 141, 188), rgba(112, 144, 224, 0.581)),
+    url("../public/grungy-blue-background-natural-cement-stone-old-texture-as-retro-pattern-wall-conceptual-wal.jpg");
+  background-position: center;
+  background-size: cover;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+.hero-content {
+  max-width: 640px;
+  color: #fff;
+}
+
+.section {
+  padding: clamp(2rem, 6vw, 4rem) 0;
+}
+
+
+.btn-primary {
+  background: linear-gradient(
+    135deg,
+    var(--primary-color),
+    var(--primary-dark)
+  );
+  border: none;
+  border-radius: var(--radius);
+  color: #fff;
+  font-weight: 600;
+  transition: all 0.25s ease;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md);
+}
+
+
+.card {
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-sm);
+  transition: all 0.3s ease;
+  max-width: 100%;
+}
+
+.card-body {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.cart-table-wrapper {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.cart-table th,
+.cart-table td {
+  padding: 0.5rem;
+  font-size: 0.875rem;
+  color: var(--text-primary);
+}
+
+
+.modal-lg {
+  max-width: 900px;
+  width: 90%;
+}
+
+.modal-body {
+  overflow-x: hidden;
+  padding: 1.5rem;
+}
+
+@media (max-width: 1200px) {
+  .modal-lg {
+    max-width: 85%;
+  }
+}
+
+@media (max-width: 992px) {
+  .modal-lg {
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 768px) {
+  .modal-lg {
+    max-width: 95%;
+  }
+
+  .modal-body {
+    padding: 1rem;
+  }
+
+  .hero-section {
+    min-height: 60vh;
+  }
+}
+
+@media (max-width: 576px) {
+  .modal-lg {
+    width: 100%;
+    margin: 0.5rem;
+  }
+}
+
+
+.pagination {
+  justify-content: center;
+  gap: 0.4rem;
+}
+
+.page-item .page-link {
+  border-radius: 10px;
+  border: none;
+  margin-top: 25px;
+  padding: 0.5rem 0.9rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  background-color: var(--primary-light);
+  transition: all 0.25s ease;
+}
+
+.page-item .page-link:hover {
+  background-color: var(--primary-color);
+  color: #fff;
+  transform: translateY(-1px);
+}
+
+.page-item.active .page-link {
+  background-color: var(--primary-dark);
+  color: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.page-item.disabled .page-link {
+  background-color: #e9ecef;
+  color: #adb5bd;
+  cursor: not-allowed;
+}
+
+.page-link:focus {
+  box-shadow: none;
+}
+
+@media (max-width: 576px) {
+  .pagination {
+    flex-wrap: wrap;
+    gap: 0.25rem;
+  }
+
+  .page-item .page-link {
+    padding: 0.35rem 0.55rem;
+    margin-top: 12px;
+  }
+}
