@@ -81,7 +81,7 @@ function Home() {
             Featured Products
           </h2>
           <Row>
-            <Products limit={4} />
+            <Products />
           </Row>
         </Container>
       </section>

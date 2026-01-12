@@ -28,7 +28,10 @@ function App() {
           <Route path="/product/:id" element={<ProductDetailsPage />} />
           <Route path="/Login" element={<Login />} />
           <Route path="/Register" element={<Register />} />
-          <Route element={<ProtectedRoute><Layout /></ProtectedRoute>}>
+          <Route element={
+            <ProtectedRoute>
+              <Layout />
+            </ProtectedRoute>}>
             <Route
               path="/Dashboard"
               element={
