@@ -34,7 +34,7 @@ The application simulates a complete e-commerce system where users can authentic
 
 ## Usage
 
-After running the development server (npm run dev), open the app in your browser. Register or log in to access the dashboard. Navigate to the Products tab to browse, search, filter, and manage items. Use the Cart section to add/remove products and view totals. The User Management tab allows searching and paginating through users. All data is fetched from the DummyJSON API for simulation purposes.
+After running the development server (npm run dev), open the app in your browser. log in to access the dashboard. Navigate to the Products tab to browse, search, filter, and manage items. Use the Cart section to add/remove products and view totals. The User Management tab allows searching through users. All data is fetched from the DummyJSON API for simulation purposes.
 
 
 ## Installation & Setup
